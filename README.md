@@ -19,3 +19,12 @@ The Adidas application is a basic e-commerce platform where users can browse and
 - HTML
 - CSS
 - Chakra UI
+
+## Setup and Installation
+
+To run this project locally, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/Divya70/metadrob-assignment.git`
+2. Navigate to the project directory: `cd app`
+3. Install dependencies: `npm install`
+4. Start the development server: `npm start`
