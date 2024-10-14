@@ -30,20 +30,6 @@ const SingleWomen = () => {
       });
   }, [params]);
 
-  const handleCart = () => {
-    let payload = {
-      ...data,
-      size,
-    };
-    console.log(payload);
-    toast({
-      title: "Added To Cart",
-      status: "success",
-      duration: 3000,
-      isClosable: true,
-    });
-  };
-
   return (
     <>
       <Flex
@@ -236,7 +222,6 @@ const SingleWomen = () => {
             position="static"
             textTransform="uppercase"
             isDisabled={!size}
-            onClick={handleCart}
           >
             Add to Cart <i className="fa-solid fa-arrow-down"></i>
           </Button>

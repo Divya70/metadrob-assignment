@@ -11,7 +11,6 @@ import {
 import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 
 const SingleShoe = () => {
@@ -19,7 +18,6 @@ const SingleShoe = () => {
   const params = useParams();
   const [data, setData] = useState({});
   const [size, setSize] = useState(null);
-  const dispatch = useDispatch();
 
   useEffect(() => {
     axios
@@ -31,20 +29,6 @@ const SingleShoe = () => {
         setData(res);
       });
   }, [params]);
-
-  const handleCart = () => {
-    let payload = {
-      ...data,
-      size,
-    };
-    console.log(payload);
-    toast({
-      title: "Added To Cart",
-      status: "success",
-      duration: 3000,
-      isClosable: true,
-    });
-  };
 
   return (
     <>
@@ -240,7 +224,6 @@ const SingleShoe = () => {
             position="static"
             textTransform="uppercase"
             isDisabled={!size}
-            onClick={handleCart}
           >
             Add to Cart <i className="fa-solid fa-arrow-down"></i>
           </Button>
